@@ -16,6 +16,7 @@ install(DIRECTORY
 
 install(DIRECTORY
   worlds
+  DESTINATION .
   )
 
 install(DIRECTORY
@@ -25,6 +26,7 @@ install(DIRECTORY
 
 install(DIRECTORY
   scripts
+  DESTINATION .
   )
 
 ament_package()
