@@ -16,7 +16,7 @@ def generate_launch_description():
         DeclareLaunchArgument('gui', default_value='true',
                               description='Set to "false" to run gazebo headless.'),
 
-        DeclareLaunchArgument('world_name', default_value='',
+        DeclareLaunchArgument('world', default_value='',
                               description='Specify gazebo world file name in gazebo_package'),
 
         IncludeLaunchDescription(
