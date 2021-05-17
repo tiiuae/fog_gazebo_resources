@@ -23,4 +23,8 @@ install(DIRECTORY
   DESTINATION share/${PROJECT_NAME}
   )
 
+install(DIRECTORY
+  scripts
+  )
+
 ament_package()
