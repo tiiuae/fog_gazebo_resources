@@ -10,8 +10,12 @@ find_package(gazebo_ros REQUIRED)
 ## --------------------------------------------------------------
 
 install(DIRECTORY
-  worlds
+  launch
   DESTINATION share/${PROJECT_NAME}
+  )
+
+install(DIRECTORY
+  worlds
   )
 
 install(DIRECTORY
