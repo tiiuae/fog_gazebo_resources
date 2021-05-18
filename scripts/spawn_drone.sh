@@ -9,7 +9,7 @@ set -e
 px4_firmware_path="$1"
 program="gazebo"
 model="ssrc_fog_x"
-models_path="$SCRIPTPATH/../models"
+models_path="$SCRIPTPATH/../share/fog_gazebo_resources/models/"
 world="forest.world"
 worlds_path="$SCRIPTPATH/../worlds"
 verbose="--verbose"
