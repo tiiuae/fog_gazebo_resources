@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>fog_gazebo_resources</name>
-  <version>1.0.0</version>
+  <version>0.0.0</version>
   <description>This package contains common gazebo files (worlds, models and plugins) for the fog UAV system.</description>
 
   <author email="spurny@fly4future.com">Vojtech Spurny</author>
