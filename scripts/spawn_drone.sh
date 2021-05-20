@@ -9,7 +9,6 @@ set -e
 px4_firmware_path="$1"
 program="gazebo"
 model="ssrc_fog_x"
-models_path="$SCRIPTPATH/../share/fog_gazebo_resources/models"
 world="forest.world"
 worlds_path="$SCRIPTPATH/../worlds"
 verbose="--verbose"
@@ -17,6 +16,7 @@ verbose="--verbose"
 src_path="$px4_firmware_path"
 sitl_bin="$px4_firmware_path/build/px4_sitl_rtps/bin/px4"
 build_path="$px4_firmware_path/build/px4_sitl_rtps"
+models_path="$px4_firmware_path/Tools/sitl_gazebo/models"
 
 # The rest of the arguments are files to copy into the working dir.
 
@@ -35,12 +35,14 @@ mkdir -p "$rootfs"
 
 modelpath=$models_path
 
-echo "Using: ${modelpath}/${model}/model.sdf"
+echo "Spawning model: ${modelpath}/${model}/${model}.sdf"
 
-while gz model --verbose --spawn-file="${modelpath}/${model}/model.sdf" --model-name=${model} -x 1.01 -y 0.98 -z 0.83 2>&1 | grep -q "An instance of Gazebo is not running."; do
+while gz model --verbose --spawn-file="${modelpath}/${model}/${model}.sdf" --model-name=${model} -x 1.01 -y 0.98 -z 0.83 2>&1 | grep -q "An instance of Gazebo is not running."; do
   echo "gzserver not ready yet, trying again!"
   sleep 1
 done
+
+echo "Model spawned!"
 
 pushd "$rootfs" >/dev/null
 
