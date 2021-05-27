@@ -10,7 +10,7 @@
 
           texture_unit
           {
-            texture tree_simple_trunk.jpg
+            texture tree_simple_trunk.png
 			filtering bilienear
             scale 1.0 1.0
           }
@@ -30,7 +30,7 @@
 
           texture_unit
           {
-            texture tree_simple_treetop.jpg
+            texture tree_simple_treetop.png
 			filtering bilienear
             scale 1.0 1.0
           }
